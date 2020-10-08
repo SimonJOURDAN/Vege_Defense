@@ -648,6 +648,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brown1MageShopItem
       objectReference: {fileID: 0}
+    - target: {fileID: 8357405884128233489, guid: 4575e0c3d8f170840ad6da747ab5578a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8357405884128233491, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
       propertyPath: m_Sprite
@@ -2720,7 +2725,7 @@ PrefabInstance:
     - target: {fileID: 8357405884128233488, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -94
+      value: -175
       objectReference: {fileID: 0}
     - target: {fileID: 8357405884128233488, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
@@ -9546,7 +9551,7 @@ GameObject:
   - component: {fileID: 280858884}
   - component: {fileID: 280858883}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Money
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9568,7 +9573,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 339.1, y: -270.7}
+  m_AnchoredPosition: {x: 169.6, y: -270.7}
   m_SizeDelta: {x: 334.53644, y: 174.55005}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &280858883
@@ -17354,7 +17359,7 @@ PrefabInstance:
     - target: {fileID: 8357405884128233488, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -222
+      value: -270
       objectReference: {fileID: 0}
     - target: {fileID: 8357405884128233488, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
@@ -19578,6 +19583,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grey1MageShopItem
       objectReference: {fileID: 0}
+    - target: {fileID: 8357405884128233489, guid: 4575e0c3d8f170840ad6da747ab5578a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8357405884128233491, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
       propertyPath: m_Sprite
@@ -20597,7 +20607,7 @@ Transform:
   - {fileID: 681948174}
   - {fileID: 959727047}
   m_Father: {fileID: 1461722604}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &837783704
 PrefabInstance:
@@ -21392,6 +21402,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Red1MageShopItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357405884128233489, guid: 4575e0c3d8f170840ad6da747ab5578a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8357405884128233491, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
@@ -22577,6 +22592,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Blue1MageShopItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357405884128233489, guid: 4575e0c3d8f170840ad6da747ab5578a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8357405884128233491, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
@@ -23778,7 +23798,7 @@ PrefabInstance:
     - target: {fileID: 8357405884128233488, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 34
+      value: -80
       objectReference: {fileID: 0}
     - target: {fileID: 8357405884128233488, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
@@ -26501,7 +26521,7 @@ PrefabInstance:
     - target: {fileID: 8357405884128233488, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 162
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8357405884128233488, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
@@ -26707,8 +26727,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 45f5d53448dcec645b8d36cb7ff32848, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 6a3fea8398c3ad6489fcb4e73b769b52, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -30853,6 +30873,7 @@ RectTransform:
   m_Children:
   - {fileID: 1149017346}
   - {fileID: 280858882}
+  - {fileID: 1910560560}
   - {fileID: 833521115}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -31607,6 +31628,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Yellow1MageShopItem
+      objectReference: {fileID: 0}
+    - target: {fileID: 8357405884128233489, guid: 4575e0c3d8f170840ad6da747ab5578a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8357405884128233491, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
@@ -40388,6 +40414,84 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f95e02c373f45ca4eba2d954c1bbbd1c, type: 3}
+--- !u!1 &1910560559
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1910560560}
+  - component: {fileID: 1910560562}
+  - component: {fileID: 1910560561}
+  m_Layer: 5
+  m_Name: Health
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1910560560
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910560559}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.2, y: 0.2, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1461722604}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 302.2, y: -270.7}
+  m_SizeDelta: {x: 334.53644, y: 174.55005}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1910560561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910560559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.40000004, g: 0.21960786, b: 0.18823531, a: 1}
+  m_RaycastTarget: 1
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 469b2d5e552efd04d9d0dacf9f96298f, type: 3}
+    m_FontSize: 196
+    m_FontStyle: 0
+    m_BestFit: 1
+    m_MinSize: 0
+    m_MaxSize: 300
+    m_Alignment: 2
+    m_AlignByGeometry: 1
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 0
+  m_Text: 888
+--- !u!222 &1910560562
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910560559}
+  m_CullTransparentMesh: 0
 --- !u!4 &1910874252 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6658582107841657693, guid: 74560bf6936984e46ba3bba804714876,
@@ -41479,6 +41583,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Snow1MageShopItem
       objectReference: {fileID: 0}
+    - target: {fileID: 8357405884128233489, guid: 4575e0c3d8f170840ad6da747ab5578a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8357405884128233491, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
       propertyPath: m_Sprite
@@ -42193,7 +42302,7 @@ PrefabInstance:
     - target: {fileID: 8357405884128233488, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -350
+      value: -365
       objectReference: {fileID: 0}
     - target: {fileID: 8357405884128233488, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
@@ -47400,7 +47509,7 @@ PrefabInstance:
     - target: {fileID: 8357405884128233488, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -478
+      value: -460
       objectReference: {fileID: 0}
     - target: {fileID: 8357405884128233488, guid: 4575e0c3d8f170840ad6da747ab5578a,
         type: 3}
