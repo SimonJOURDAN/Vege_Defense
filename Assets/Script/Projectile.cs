@@ -5,42 +5,42 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
 
-    private int damage = 10;
+    private int damage = 10;    //Dégats infligés  à la cible
 
-    private Transform target;
+    private Transform target;   //Cible
 
-    public float flight_speed = 20f;
+    public float flight_speed = 20f;    //Vitesse de vol
 
-    private Ennemy ennemy;
+    private Ennemy ennemy;  //Ennemi ciblé
 
-    public void Seek(Transform set_target){
-        target = set_target;
+    public void Seek(Transform set_target){ //Méthode pour assigner une cible
+        target = set_target;    //Initialisation de la cible
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(target == null)
+        if(target == null)  //Si la cible n'existe plus
         {
-            Destroy(gameObject);
+            Destroy(gameObject);    //Destruction du projectile
             return;
         }
         
-        Vector2 dir = target.position - transform.position;
-        float distanceThisFrame = flight_speed * Time.deltaTime;
+        Vector2 dir = target.position - transform.position; //Calcul de la direction de la cible
+        float distanceThisFrame = flight_speed * Time.deltaTime;    //Calcul du déplacement vers la cible
 
-        if(dir.magnitude <= distanceThisFrame){
-            HitTarget();
+        if(dir.magnitude <= distanceThisFrame){ //Si le projectile doit toucher pendant cette frame
+            HitTarget();    //Toucher la cible
             return;
         }else{
-            transform.Translate(dir.normalized * distanceThisFrame, Space.World);
-        }
+            transform.Translate(dir.normalized * distanceThisFrame, Space.World);   //Déplacement vers la cible
+        }   
     }
 
-    void HitTarget(){
-        ennemy = target.GetComponent<Ennemy>();
-        ennemy.TakeDamage(damage);
-        Destroy(gameObject);
+    void HitTarget(){   //Méthode pour toucher la cible
+        ennemy = target.GetComponent<Ennemy>(); //Récupération de la partie script de la cible
+        ennemy.TakeDamage(damage);  //Appel de la méthode prendre des dégats de la cible
+        Destroy(gameObject);    //Destruction du projectile
         return;
     }
 }

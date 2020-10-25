@@ -5,49 +5,49 @@ using UnityEngine;
 public class node : MonoBehaviour
 {
 
-    private GameObject mage;
+    private GameObject mage;    //Mage lié à la node
 
-    void OnMouseEnter(){
-        GameObject cursor = GameObject.FindGameObjectWithTag("Cursor");
-        Transform cursorTransform = cursor.transform;
-        cursorTransform.Translate(transform.position - cursorTransform.position);
+    void OnMouseEnter(){    //Méthode appelée quand la souris arrive sur l'objet
+        GameObject cursor = GameObject.FindGameObjectWithTag("Cursor"); //Récupération du carréVert
+        Transform cursorTransform = cursor.transform;   //Récupération du transform du carréVert
+        cursorTransform.Translate(transform.position - cursorTransform.position);   //Déplacement du carréVert
 
-        cursor.GetComponent<carrevert>().SetNode(this);
+        cursor.GetComponent<carrevert>().SetNode(this); //Assignement de la node au carréVert
 
-        GameObject magecursor = GameObject.FindGameObjectWithTag("Contour");
-        Transform magecursorTransform = magecursor.transform;
-        magecursorTransform.Translate(transform.position - magecursorTransform.position);
+        GameObject magecursor = GameObject.FindGameObjectWithTag("Contour");    //Récupération du contour
+        Transform magecursorTransform = magecursor.transform;   //Récupération du transform du contour
+        magecursorTransform.Translate(transform.position - magecursorTransform.position);   //Déplacement du contour
     }
 
-    void OnMouseOver(){
-        if (mage != null)
+    void OnMouseOver(){ //Méthode appelée quand la souris survole l'objet
+        if (mage != null)   //Si le mage est initialisé
         {
-            GameObject.FindGameObjectWithTag("Cursor").GetComponent<Renderer>().enabled = false;
-            GameObject.FindGameObjectWithTag("Contour").GetComponent<Renderer>().enabled = true;
+            GameObject.FindGameObjectWithTag("Cursor").GetComponent<Renderer>().enabled = false;    //Ne pas afficher le carréVert
+            GameObject.FindGameObjectWithTag("Contour").GetComponent<Renderer>().enabled = true;    //Afficher le contour
         }
         else
         {
-            GameObject.FindGameObjectWithTag("Cursor").GetComponent<Renderer>().enabled = true;
-            GameObject.FindGameObjectWithTag("Contour").GetComponent<Renderer>().enabled = false;
+            GameObject.FindGameObjectWithTag("Cursor").GetComponent<Renderer>().enabled = true;     //Afficher le carréVert
+            GameObject.FindGameObjectWithTag("Contour").GetComponent<Renderer>().enabled = false;   //Ne pas afficher le contour
         }
     }
 
     void OnMouseExit(){
-        GameObject.FindGameObjectWithTag("Cursor").GetComponent<Renderer>().enabled = false;
-        GameObject.FindGameObjectWithTag("Contour").GetComponent<Renderer>().enabled = false;
+        GameObject.FindGameObjectWithTag("Cursor").GetComponent<Renderer>().enabled = false;    //Ne pas afficher le carréVert 
+        GameObject.FindGameObjectWithTag("Contour").GetComponent<Renderer>().enabled = false;   //Ne pas afficher le contour
     }
 
-    void OnMouseDown(){
-        if(mage != null){
-            Debug.Log("upgrade");
+    void OnMouseDown(){ //Méthode appelée si l'utilisateur clique sur la souris
+        if(mage != null){   //Si le mage est initialisé
+            //Upgrade
         }
     }
 
-    public void SetMage(GameObject m){
+    public void SetMage(GameObject m){  //Setter pour le mage
         mage = m;
     }
 
-    public GameObject GetMage(){
+    public GameObject GetMage(){    //Getter pour le mage
         return mage;
     }
 

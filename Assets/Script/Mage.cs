@@ -6,8 +6,6 @@ using UnityEngine.UI;
 public class Mage : MonoBehaviour
 {
 
-    
-
     [Header ("Attributes")]
     public float range = 3f;            //Portée d'attaque du mage
     public float fireRate = 1f;         //Vitesse d'attaque du mage

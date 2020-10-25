@@ -6,52 +6,47 @@ using UnityEngine.EventSystems;
 public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, IEndDragHandler, IDragHandler
 {
 
-    [SerializeField] private Canvas canvas;
+    [SerializeField] private Canvas canvas; //Canvas sur lequel les objet sont déplacés
     
-    public GameObject magePrefab;
+    public GameObject magePrefab;   //Prefab du mage à invoquer
 
-    public int cost;
+    public int cost;    //Coût du mage à invoquer
 
-    private RectTransform rectTransform;
+    private RectTransform rectTransform;    //Transform pour l'objet actuel
 
-    private Vector2 pos;
+    private Vector2 pos;    //Position de départ de l'objet actuel
 
-    private GameObject gameManager;
+    private GameObject gameManager; //GameManager
 
-    private void Awake(){
-        rectTransform = GetComponent<RectTransform>();
-        pos = rectTransform.anchoredPosition;
-        gameManager = GameObject.FindGameObjectWithTag("GameManager");
+    private void Awake(){   //Méthode appelée à la création de l'objet
+        rectTransform = GetComponent<RectTransform>();  //Initialisation du Trandform
+        pos = rectTransform.anchoredPosition;   //Initialisation de la position
+        gameManager = GameObject.FindGameObjectWithTag("GameManager");  //Initialisation du GameManager
     }
-    public void OnPointerDown(PointerEventData eventData){
-        
-    }
+    public void OnPointerDown(PointerEventData eventData){} //Méthode non utilisée pour le moment
 
-    public void OnDrag(PointerEventData eventData){
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+    public void OnDrag(PointerEventData eventData){ //Pendant le déplacement
+        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor; //Déplacement de l'objet
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
+    public void OnBeginDrag(PointerEventData eventData){}   //Méthode non utilisée pour le moment
+
+    public void OnEndDrag(PointerEventData eventData)   //Méthode appelée à la fin du déplacement
     {
-        
-    }
-
-    public void OnEndDrag(PointerEventData eventData)
-    {
-        GameManager gm = gameManager.GetComponent<GameManager>();
-        GameObject cursor = GameObject.FindGameObjectWithTag("Cursor");
-        if(cursor.GetComponent<Renderer>().enabled == true){
-            if(gm.affordable(cost)){
-                gm.spend(cost);
-                GameObject mage = Instantiate(magePrefab, (Vector2)cursor.transform.position, Quaternion.Euler(0, 0, 0));
-                cursor.GetComponent<carrevert>().GetNode().GetComponent<node>().SetMage(mage);
+        GameManager gm = gameManager.GetComponent<GameManager>();   //Récupération de la partie script de GameManager
+        GameObject cursor = GameObject.FindGameObjectWithTag("Cursor"); //Récupération de l'objet 'Cursor'
+        if(cursor.GetComponent<Renderer>().enabled == true){    //Si le carréVert est affiché (si la souris est situé au dessus d'un emplacement à construire)
+            if(gm.affordable(cost)){    //Si le montant stocké est supérieur à 'cost'
+                gm.spend(cost); //Dépenser le montant: 'cost'
+                GameObject mage = Instantiate(magePrefab, (Vector2)cursor.transform.position, Quaternion.Euler(0, 0, 0));   //Créer un mange à la position de la node
+                cursor.GetComponent<carrevert>().GetNode().GetComponent<node>().SetMage(mage);  //Associer le mage à la node sur laquelle il est
             }else{
                 //message not enough gold
             }
         }else{
             //message not a valid spot
         }
-        rectTransform.anchoredPosition = pos;
+        rectTransform.anchoredPosition = pos;   //Remettre l'objet à sa position initiale
     }
 
 }

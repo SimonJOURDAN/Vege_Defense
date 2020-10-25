@@ -10,25 +10,24 @@ public class GameManager : MonoBehaviour
     public int startMoney;
     public int money;
 
-    // Start is called before the first frame update
-    void Start()
+    void Start()    //Méthode appelée avant la première update
     {
-        money = startMoney;
-        moneyText.text = money.ToString();
+        money = startMoney; //Initialisation de l'argent disponible
+        moneyText.text = money.ToString();  //Initialisation de l'affichage de l'argent
     }
 
     // Update is called once per frame
-    public bool affordable(int cost){
+    public bool affordable(int cost){   //Méthode qui permet de déterminer si le joueur pas dépenser un certain montant
         return(cost<=money);
     }
 
-    public void spend(int cost){
-        money-=cost;
-        moneyText.text = money.ToString();
+    public void spend(int cost){    //Méthode qui fait dépenser un certain montant
+        money-=cost;    //Mise à jour de l'argent disponible
+        moneyText.text = money.ToString();  //Mise à jour de l'affichage
     }
 
-    public void earn(int amount){
-        money+=amount;
-        moneyText.text = money.ToString();
-    }
+    public void earn(int amount){   //Méthode qui permet de gagner de l'argent
+        money+=amount;  //Mise à jour de l'argent disponible
+        moneyText.text = money.ToString();  //Mise à jour de l'affichage
+    }   
 }

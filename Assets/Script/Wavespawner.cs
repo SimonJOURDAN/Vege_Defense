@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//Class non utilisée pour le moment
 public class Wavespawner : MonoBehaviour
 {
     // Start is called before the first frame update
